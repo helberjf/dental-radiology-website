@@ -1,0 +1,165 @@
+Crie um site de loja virtual para um laboratório odontológico digital, inspirado na estrutura da página de produto de referência enviada, mas sem copiar marca, textos, imagens ou identidade visual protegida.
+
+Stack:
+- Next.js com App Router
+- TypeScript
+- Tailwind CSS
+- Componentes reutilizáveis
+- Não usar React Router
+- Layout responsivo para desktop e mobile
+
+Objetivo:
+Criar uma loja de serviços odontológicos digitais onde dentistas possam comprar ou solicitar serviços como conversão de arquivos, DICOM/STL, impressão 3D, biomodelos, cirurgia guiada, ortodontia, prótese e radiologia digital.
+
+Estrutura principal do site:
+
+1. Topbar superior:
+- Endereço da empresa
+- WhatsApp clicável
+- Ícones/redes sociais
+- Visual limpo e profissional
+
+2. Header principal:
+- Logo à esquerda
+- Menu com:
+  - Home
+  - Sobre
+  - Produtos/Serviços
+  - Fale Conosco
+- Dropdown em Produtos/Serviços com categorias:
+  - Biomodelos
+  - Cirurgia Guiada
+  - Conversão de Arquivos
+  - DSD 2D & 3D
+  - Endoguide
+  - Impressão 3D
+  - Ortodontia
+  - Prótese
+  - Perioguide
+  - Placa Miorrelaxante
+  - Radiologia
+- Botão destacado “Fazer Orçamento”
+- Ícone de carrinho com valor total e quantidade de itens
+
+3. Página de produto:
+Criar uma página de produto para “Conversão Dental Slice”.
+
+A página deve conter:
+- Breadcrumb simples
+- Título do produto
+- Imagem grande do produto/serviço
+- Preço: R$ 89,90
+- Botão/link “Envie seus arquivos aqui”
+- Campo de quantidade
+- Botão “Adicionar ao carrinho”
+- Área de descrição
+- Área de avaliações
+- Formulário de avaliação com:
+  - Nota
+  - Comentário
+  - Nome
+  - E-mail
+- Produtos relacionados:
+  - Fusão Arquivos DICOM — R$ 49,90
+  - Conversão DICOM / STL — R$ 89,90
+
+4. Carrinho:
+- Criar estado simples de carrinho no frontend
+- Permitir adicionar produto
+- Mostrar quantidade e total no header
+- Criar página /carrinho com:
+  - Produto
+  - Quantidade
+  - Preço unitário
+  - Total
+  - Botão finalizar pedido
+
+5. Finalização:
+- Criar página /checkout
+- Campos:
+  - Nome
+  - E-mail
+  - WhatsApp
+  - Observações
+  - Link dos arquivos enviados
+- Botão “Enviar pedido pelo WhatsApp”
+- Ao clicar, abrir WhatsApp com mensagem pronta contendo os dados do pedido
+
+6. Rodapé:
+- Logo/nome da empresa
+- Texto institucional curto:
+  “Laboratório digital especializado em serviços e soluções para odontologia digital.”
+- Redes sociais
+- Links:
+  - Sobre nós
+  - Contato
+  - Loja
+  - Termos de Serviço
+  - Política de Privacidade
+  - Política de Reembolso
+  - Política de Envio
+- Contato:
+  - Endereço
+  - WhatsApp
+  - E-mail
+- Copyright dinâmico com o ano atual
+
+7. Design:
+- Visual profissional, moderno e clínico
+- Fundo branco
+- Tons principais: azul escuro, azul claro e verde/água para botões
+- Cards com bordas arredondadas
+- Espaçamento confortável
+- Tipografia limpa
+- Botões bem visíveis
+- Layout muito parecido na estrutura de e-commerce, mas com identidade própria
+
+8. Responsividade:
+- Menu mobile com botão hambúrguer
+- Produto em coluna única no celular
+- Botões grandes e fáceis de clicar
+- Carrinho visível no mobile
+
+9. Código:
+- Criar componentes:
+  - TopBar
+  - Header
+  - DropdownMenu
+  - ProductCard
+  - ProductPage
+  - Footer
+  - CartProvider
+  - CartPage
+  - CheckoutPage
+  - WhatsAppButton
+- Usar dados mockados em um arquivo products.ts
+- Código limpo, organizado e fácil de alterar
+- Não deixar erros de TypeScript
+- Não usar bibliotecas desnecessárias
+
+10. Dados temporários:
+Empresa:
+- Nome: Dental Lab Digital
+- Endereço: Rua Exemplo, 123 - Centro
+- WhatsApp: 55 48 99999-9999
+- E-mail: contato@dentallabdigital.com.br
+- Instagram: https://instagram.com/dentallabdigital
+- Facebook: https://facebook.com/dentallabdigital
+
+Produtos:
+1. Conversão Dental Slice
+Preço: R$ 89,90
+Descrição: Serviço de conversão de arquivos odontológicos digitais para planejamento e fluxo de trabalho clínico.
+
+2. Fusão Arquivos DICOM
+Preço: R$ 49,90
+Descrição: Serviço de fusão de arquivos DICOM para planejamento digital.
+
+3. Conversão DICOM / STL
+Preço: R$ 89,90
+Descrição: Conversão de arquivos DICOM e STL para uso em fluxos digitais odontológicos.
+
+Entrega esperada:
+- Gere todos os arquivos necessários do projeto.
+- Explique onde ficam os dados da empresa e dos produtos para eu editar depois.
+- Garanta que o projeto rode com pnpm dev.
