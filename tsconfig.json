@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "tsBuildInfoFile": "./node_modules/.tsc-cache/tsconfig.tsbuildinfo",
 
     /* Path aliases */
     "paths": {
