@@ -79,6 +79,17 @@ export function Footer() {
         <p>
           &copy; {currentYear} {company.name}. Todos os direitos reservados.
         </p>
+        <p className="mt-2">
+          Desenvolvido por{" "}
+          <a
+            href="https://www.linkedin.com/in/helber-soares/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white transition-colors"
+          >
+            Helber Soares
+          </a>
+        </p>
       </div>
     </footer>
   );
