@@ -41,12 +41,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Legal */}
-        <div>
-          <h3 className="font-bold mb-6 text-white text-lg">Legal</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-          </ul>
-        </div>
 
         {/* Contact */}
         <div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
@@ -63,7 +64,7 @@ export default function Contact() {
       });
 
       toast.success("Redirecionando para WhatsApp...");
-    } catch (error) {
+    } catch {
       toast.error("Erro ao processar formulário");
     } finally {
       setIsSubmitting(false);

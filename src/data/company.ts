@@ -6,7 +6,8 @@ export const company = {
   email: "dpiriobranco@gmail.com",
   instagram: null,
   facebook: null,
-  logo: "/manus-storage/dpi_planning_center_logo_2f66b596.png",
+  logo: "/logo.png",
+  logoHorizontal: "/image.png",
 };
 
 export const whatsappNumber = company.whatsapp.replace(/\D/g, "");
