@@ -36,15 +36,18 @@ export function ServiceCard({
     <div className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
       {/* Header */}
       <div className="p-6 border-b border-gray-200">
-        <div className="text-5xl mb-4">{service.icon}</div>
-        <h3 className="text-2xl font-bold text-black mb-2 font-serif">
-          {service.name}
-        </h3>
+        {/* Container flex para ícone + título */}
+        <div className="flex items-center gap-2 mb-1">
+          <div className="text-5xl">{service.icon}</div>
+          <h3 className="text-2xl font-bold text-black font-serif">
+            {service.name}
+          </h3>
+        </div>
         <p className="text-gray-600 text-sm">{service.description}</p>
       </div>
 
       {/* Price */}
-      <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
+      <div className="px-6 py-1 bg-gray-50 border-b border-gray-200">
         <p className="text-gray-600 text-sm mb-1">Preço do Serviço</p>
         <p className="text-3xl font-bold text-green-600">
           R$ {service.price.toFixed(2)}

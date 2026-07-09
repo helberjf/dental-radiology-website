@@ -70,28 +70,28 @@ export default function Services() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-24 md:py-40 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-10 md:py-14 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-20 w-72 h-72 bg-gray-400 rounded-full blur-3xl"></div>
         </div>
         <div className="container relative z-10 text-center">
-          <p className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-widest">
+          <p className="text-gray-300 text-sm font-semibold mb-2 uppercase tracking-widest">
             SERVIÇOS
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 font-serif">
             Nossos Serviços
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-300 max-w-2xl mx-auto">
             Soluções completas de odontologia digital para sua prática
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-8 md:py-12 bg-gray-50">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const stats = getServiceStats(service.id);
               return (

@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { services, reviews } from "@/data/services";
-import { getWhatsappUrl } from "@/data/company";
+import { company, getWhatsappUrl } from "@/data/company";
 import { Link } from "wouter";
 import { Clock, Users, Zap } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
@@ -70,9 +70,13 @@ export default function Home() {
                 {/* Circular decoration */}
                 <div className="absolute inset-0 border-2 border-gray-500 rounded-full opacity-30"></div>
                 <div className="absolute inset-8 border border-gray-400 rounded-full opacity-20"></div>
-                {/* Icon placeholder */}
+                {/* Brand icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl">🦷</div>
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="w-48 h-48 object-contain rounded-2xl shadow-2xl"
+                  />
                 </div>
               </div>
             </div>
@@ -81,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* 3 Services CTA Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="container">
           <div className="flex flex-col gap-4 md:gap-6 items-center">
             {/* Primeira linha: 1 botão centralizado */}
@@ -91,7 +95,7 @@ export default function Home() {
               ))}
             </div>
             {/* Segunda linha: 2 botões lado a lado */}
-            <div className="flex gap-3 md:gap-4 w-full md:w-auto">
+            <div className="flex gap-6 md:gap-4 w-full md:w-auto">
               {services.slice(1, 3).map((service) => (
                 <a key={service.id} href={`/servicos#${service.id}`} className="flex-1 px-4 md:px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center animate-fade-in-up cursor-pointer text-sm md:text-base" onMouseEnter={(e) => { e.currentTarget.style.animation = 'bounce 0.6s ease-in-out'; }} onAnimationEnd={(e) => { e.currentTarget.style.animation = ''; }}>{service.name}</a>
               ))}
@@ -101,13 +105,13 @@ export default function Home() {
       </section>
 
       {/* Services Section - "Onde a Inovação Encontra o Cuidado Odontológico" */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-3 md:py-32 bg-gray-50">
         <div className="container" id="servicos">
           <div className="mb-16">
             <p className="text-gray-700 text-sm font-semibold mb-2 uppercase tracking-widest">
               Onde a Inovação Encontra o Cuidado Odontológico
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-2 font-serif">
               Nossos Serviços
             </h2>
           </div>
@@ -131,7 +135,7 @@ export default function Home() {
               <Button
                 className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-lg font-semibold"
               >
-                Ver mais produtos/serviços
+                Ver serviços
               </Button>
             </Link>
           </div>
@@ -143,11 +147,11 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <div className="bg-linear-to-br from-gray-800 to-gray-700 rounded-lg p-8 text-white h-96 flex items-center justify-center">
-                <p className="text-lg text-center font-semibold">
-                  Laboratório Digital Equipado com Tecnologia de Ponta
-                </p>
-              </div>
+              <img
+                src="/lab.png"
+                alt="Laboratório Digital Equipado com Tecnologia de Ponta"
+                className="w-full h-96 object-cover rounded-lg"
+              />
             </div>
             <div>
               <p className="text-gray-700 text-sm font-semibold mb-2 uppercase tracking-widest">
@@ -199,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Horários Section */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-16">
             <p className="text-gray-700 text-sm font-semibold mb-2 uppercase tracking-widest">
@@ -210,13 +214,13 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
-            {["Segunda", "Terça", "Quarta", "Quinta", "Sexta"].map((day) => (
-              <div key={day} className="bg-white p-6 rounded-lg border border-gray-200 text-center">
-                <p className="font-semibold text-black mb-2">{day}</p>
-                <p className="text-gray-700 font-bold">08:00 - 18:00</p>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+  
+            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33%-0.5rem)]">
+              <p className="font-semibold text-black mb-2">Segunda a Sexta</p>
+              <p className="text-gray-700 font-bold">08:00 - 18:00</p>
+            </div>
+    
           </div>
 
           <div className="text-center">
@@ -236,7 +240,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-linear-to-r from-gray-900 to-black text-white">
         <div className="container text-center">
-          <p className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-widest">
+          <p className="text-gray-300 text-sm font-semibold mb-1 uppercase tracking-widest">
             Tecnologia de Ponta para um Atendimento Odontológico de Excelência
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
@@ -245,7 +249,7 @@ export default function Home() {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Oferecemos uma ampla gama de serviços digitais para sua Radiologia Odontológica. Conheça nossos serviços, estamos aqui para trazer o melhor da tecnologia para sua prática clínica.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <a href={getWhatsappUrl()} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-6 text-lg font-semibold flex items-center justify-between gap-3">
                 <span>Conversar no WhatsApp</span>
@@ -255,7 +259,7 @@ export default function Home() {
             <Link href="/contato">
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg"
+                className="border-white text-black hover:bg-white hover:text-black px-8 py-6 text-lg"
               >
                 Enviar Mensagem
               </Button>
