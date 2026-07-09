@@ -120,11 +120,11 @@ export function Cart() {
       {/* Cart Button - Floating */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 right-6 z-40 bg-gray-800 hover:bg-gray-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fade-in"
+        className="fixed bottom-20 md:bottom-24 right-4 md:right-6 z-40 bg-gray-800 hover:bg-gray-700 text-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in"
         aria-label="Abrir carrinho"
       >
         <div className="relative">
-          <ShoppingCart size={28} />
+          <ShoppingCart size={24} className="md:w-7 md:h-7" />
           {cartItems.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
               {cartItems.length}
