@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-      <div className="container py-4 flex items-center justify-between">
+      <div className="container py-1 flex items-center justify-between">
         <Link href="/">
           <a className="flex items-center gap-3">
             <img
@@ -42,7 +42,7 @@ export function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-2">
           <a href={getWhatsappUrl()} target="_blank" rel="noopener noreferrer">
             <Button
               variant="default"

@@ -11,13 +11,13 @@ export function FloatingWhatsApp() {
       {/* Floating Button */}
       <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+          className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           aria-label="Abrir WhatsApp"
         >
           {isOpen ? (
-            <X size={28} />
+            <X size={24} className="md:w-7 md:h-7" />
           ) : (
-            <WhatsAppIcon className="w-7 h-7" />
+            <WhatsAppIcon className="w-6 h-6 md:w-7 md:h-7" />
           )}
         </button>
 
