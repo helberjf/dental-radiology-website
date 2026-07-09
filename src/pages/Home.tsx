@@ -91,13 +91,13 @@ export default function Home() {
             {/* Primeira linha: 1 botão centralizado */}
             <div className="w-full md:w-auto">
               {services.slice(0, 1).map((service) => (
-                <a key={service.id} href={`/servicos#${service.id}`} className="block px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center animate-fade-in-up cursor-pointer animate-delay-100" onMouseEnter={(e) => { e.currentTarget.style.animation = 'bounce 0.6s ease-in-out'; }} onAnimationEnd={(e) => { e.currentTarget.style.animation = ''; }}>{service.name}</a>
+                <a key={service.id} href={`/servicos#card-${service.id}`} className="block px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center animate-fade-in-up cursor-pointer animate-delay-100" onMouseEnter={(e) => { e.currentTarget.style.animation = 'bounce 0.6s ease-in-out'; }} onAnimationEnd={(e) => { e.currentTarget.style.animation = ''; }}>{service.name}</a>
               ))}
             </div>
             {/* Segunda linha: 2 botões lado a lado */}
             <div className="flex gap-6 md:gap-4 w-full md:w-auto">
               {services.slice(1, 3).map((service) => (
-                <a key={service.id} href={`/servicos#${service.id}`} className="flex-1 px-4 md:px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center animate-fade-in-up cursor-pointer text-sm md:text-base" onMouseEnter={(e) => { e.currentTarget.style.animation = 'bounce 0.6s ease-in-out'; }} onAnimationEnd={(e) => { e.currentTarget.style.animation = ''; }}>{service.name}</a>
+                <a key={service.id} href={`/servicos#card-${service.id}`} className="flex-1 px-4 md:px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center animate-fade-in-up cursor-pointer text-sm md:text-base" onMouseEnter={(e) => { e.currentTarget.style.animation = 'bounce 0.6s ease-in-out'; }} onAnimationEnd={(e) => { e.currentTarget.style.animation = ''; }}>{service.name}</a>
               ))}
             </div>
           </div>

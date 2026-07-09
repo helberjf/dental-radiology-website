@@ -8,12 +8,15 @@ interface ServiceCardProps {
   service: Service;
   reviewCount?: number;
   averageRating?: number;
+  showQuickReview?: boolean;
 }
 
 export function ServiceCard({
   service,
+  showQuickReview = false,
 }: ServiceCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isQuickReviewOpen, setIsQuickReviewOpen] = useState(false);
 
   const handleWhatsApp = () => {
     const whatsappUrl = getWhatsappUrl(getServiceWhatsappMessage(service.name));
@@ -94,21 +97,37 @@ export function ServiceCard({
         </div>
       )}
 
-      {/* Review Section */}
-      <div className="px-6 py-4 border-t border-gray-200 bg-white">
-        <p className="text-sm text-gray-600 mb-3">Avalie este serviço:</p>
-        <div className="flex gap-2">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <button
-              key={star}
-              className="text-2xl hover:scale-110 transition-transform"
-              title={`${star} estrela${star > 1 ? "s" : ""}`}
-            >
-              ⭐
-            </button>
-          ))}
+      {showQuickReview && (
+        <div className="px-6 py-4 border-t border-gray-200 bg-white">
+          <button
+            onClick={() => setIsQuickReviewOpen(!isQuickReviewOpen)}
+            className="w-full bg-gray-100 hover:bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-between"
+          >
+            Deixe sua avaliação
+            <ChevronDown
+              size={20}
+              className={`transition-transform ${isQuickReviewOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          {isQuickReviewOpen && (
+            <div className="mt-3">
+              <p className="text-sm text-gray-600 mb-3">Avalie este serviço:</p>
+              <div className="flex gap-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    className="text-2xl hover:scale-110 transition-transform"
+                    title={`${star} estrela${star > 1 ? "s" : ""}`}
+                  >
+                    ⭐
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-      </div>
+      )}
     </div>
   );
 }

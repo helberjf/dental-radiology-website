@@ -187,6 +187,34 @@
     animation-delay: 0.4s;
   }
 
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .reveal-on-scroll.animate-delay-100 {
+    transition-delay: 0.1s;
+  }
+
+  .reveal-on-scroll.animate-delay-200 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-on-scroll.animate-delay-300 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-on-scroll.animate-delay-400 {
+    transition-delay: 0.4s;
+  }
+
   @keyframes pulse {
     0%, 100% {
       opacity: 1;
